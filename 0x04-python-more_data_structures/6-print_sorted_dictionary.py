@@ -1,8 +1,11 @@
 #!/usr/bin/python3
+
+
 def print_sorted_dictionary(a_dictionary):
-    for diction in a_dictionary:
-        print(f"{diction}: {a_dictionary[diction]}")
+    # Get the sorted list of keys
+    sorted_keys = sorted(a_dictionary.keys())
 
-
-a_dictionary = {"language": "C", "Number": 89, "track": "Low level", "ids": [1, 2, 3]}
-print_sorted_dictionary(a_dictionary)
+    # Iterate over the sorted keys and print key-value pairs
+    for key in sorted_keys:
+        value = a_dictionary[key]
+        print(f"{key}: {value}")

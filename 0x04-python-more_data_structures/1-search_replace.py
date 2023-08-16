@@ -1,11 +1,16 @@
 #!/usr/bin/python3
+
+
 def search_replace(my_list, search, replace):
-    for i in range(len(my_list)):
-        if my_list[i] == search:
-            my_list[i] = replace
+    # Create a new list to store the modified elements
+    new_list = []
 
+    # Iterate over the elements of the input list
+    for element in my_list:
+        # If the element matches search value, replace it with the new value
+        if element == search:
+            new_list.append(replace)
+        else:
+            new_list.append(element)
 
-my_list = [1, 2, 3, 4, 5, 4, 2, 1, 1, 4, 89]
-search_replace(my_list, 2, 89)
-
-print(my_list)  # Output: [1, 89, 3, 4, 5, 4, 89, 1, 1, 4, 89]
+    return new_list
